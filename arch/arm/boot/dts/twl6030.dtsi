@@ -97,9 +97,25 @@
 		#pwm-cells = <2>;
 	};
 
-	gpadc {
+	clk32kg: regulator-clk32kg {
+		compatible = "ti,twl6030-clk32kg";
+		regulator-always-on;
+	};
+
+	gpadc: gpadc {
 		compatible = "ti,twl6030-gpadc";
 		interrupts = <3>;
 		#io-channel-cells = <1>;
+	};
+
+       adc: gpadc {
+               compatible = "ti,twl6032-gpadc";
+               interrupts = <3>;
+               #io-channel-cells = <1>;
+       };
+
+	twl_pwrbutton: pwrbutton {
+		compatible = "ti,twl6030-pwrbutton";
+		interrupts = <0>;
 	};
 };
