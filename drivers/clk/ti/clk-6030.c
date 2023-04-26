@@ -12,9 +12,10 @@
 
 #include <linux/module.h>
 #include <linux/of.h>
+#include <linux/clk.h> 
 #include <linux/clkdev.h>
 #include <linux/clk-provider.h>
-#include <linux/i2c/twl.h>
+#include <linux/mfd/twl.h>
 #include <linux/platform_device.h>
 
 struct twl6030_desc {
@@ -100,7 +101,7 @@ static void __init of_ti_twl6030_clk32kaudio_setup(struct device_node *node)
 
 	init.name = node->name;
 	init.ops = &twl6030_clk32kaudio_ops;
-	init.flags = CLK_IS_ROOT;
+	//init.flags = CLK_IS_ROOT;
 
 	clk = clk_register(NULL, &clk_hw->hw);
 	if (!IS_ERR(clk)) {
