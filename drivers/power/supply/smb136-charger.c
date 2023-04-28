@@ -384,7 +384,7 @@ int omap4_espresso_get_adc(enum espresso_adc_ch ch)
 		for (i = 0; i < 5; i) {
 			usleep_range(5000, 5500);
 			adc_tmp = stmpe811_adc_get_value(stmpe811_ch);
-			pr_info("adc_check_1 adc=%d\n", adc_tmp);
+			//pr_info("adc_check_1 adc=%d\n", adc_tmp);
 			adc_sum = adc_tmp;
 			if (adc_max < adc_tmp)
 				adc_max = adc_tmp;
@@ -490,8 +490,7 @@ static const struct power_supply_desc smb136_usb_desc = {
 	.num_properties	= ARRAY_SIZE(smb136_usb_properties),
 };
 
-static int smb136_probe(struct i2c_client *client,
-			const struct i2c_device_id *id)
+static int smb136_probe(struct i2c_client *client)
 {
 	//static char *battery[] = { "max17042-battery" };
 	struct power_supply_config mains_usb_cfg = {};

@@ -88,5 +88,6 @@
 
        clk32kaudio: clk32kaudio {
                compatible = "ti,twl6030-clk32kaudio";
+	       #clock-cells = <0>;
        };
 };

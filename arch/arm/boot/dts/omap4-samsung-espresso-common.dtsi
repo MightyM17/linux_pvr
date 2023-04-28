@@ -211,6 +211,41 @@
 		compatible = "gpio-ir-tx";
 		gpios = <&gpio2 27 GPIO_ACTIVE_HIGH>; /* GPIO_59 */
 	};
+
+        codec_26mhz: clock {
+                compatible = "fixed-clock";
+                #clock-cells = <0>;
+                clock-frequency = <26000000>;
+                clock-output-names = "codec_26mhz";
+        };
+
+	sound {
+		compatible = "simple-audio-card";
+		simple-audio-card,name = "Espresso-Sound-Card";
+		simple-audio-card,format = "i2s";
+		simple-audio-card,bitclock-master = <&link0_codec>;
+		simple-audio-card,frame-master = <&link0_codec>;
+		simple-audio-card,mclk-fs = <256>;
+		//simple-audio-card,hp-det-gpio = <&gpio6 11 GPIO_ACTIVE_LOW>; GPIO 171 https://github.com/Unlegacy-Android/android_kernel_ti_omap4/blob/3.0/common/sound/soc/omap/espresso.c#L489
+
+		/*simple-audio-card,widgets =
+				"Headphone", "Headphone Jack",
+				"Speaker", "Main Speaker";
+
+		simple-audio-card,routing =
+				"Headphone Jack", "HPOUTL",
+				"Headphone Jack", "HPOUTR",
+				"Main Speaker", "SPKOUTL",
+				"Main Speaker", "SPKOUTR";*/
+
+		link0_cpu: simple-audio-card,cpu {
+			sound-dai = <&mcbsp3>;
+		};
+
+		link0_codec: simple-audio-card,codec {
+			sound-dai = <&wm1811>;
+		};
+	};
 };
 
 &omap4_pmx_wkup {
@@ -431,6 +466,19 @@
 			/* gpmc_ad9.gpio_33 - ALS_INT_18 */
 		>;
 	};
+
+	mcbsp3_pins: pinmux_mcbsp3_pins {
+                pinctrl-single,pins = <
+                        OMAP4_IOPAD(0x106, PIN_INPUT | MUX_MODE1)
+                        /* abe_pdm_ul_data.abe_mcbsp3_dr - AP_I2S_DIN */
+                        OMAP4_IOPAD(0x108, PIN_OUTPUT | MUX_MODE1)
+                        /* abe_pdm_dl_data.abe_mcbsp3_dx - AP_I2S_DOUT */
+                        OMAP4_IOPAD(0x10a, PIN_INPUT | MUX_MODE1)
+                        /* abe_pdm_frame.abe_mcbsp3_clkx - AP_I2S_CLK */
+                        OMAP4_IOPAD(0x10c, PIN_INPUT | MUX_MODE1)
+                        /* abe_pdm_lb_clk.abe_mcbsp3_fsx - AP_I2S_SYNC */
+                >;
+        };
 };
 
 &uart3 {
@@ -465,10 +513,48 @@
 			ti,system-power-controller;
 		};
 	};
+
+	wm1811: audio-codec@1a {
+		compatible = "wlf,wm1811";
+		reg = <0x1a>;
+
+		#sound-dai-cells = <0>;
+
+		clocks = <&codec_26mhz>,
+			<&clk32kaudio>;
+		clock-names = "MCLK1", "MCLK2";
+
+		interrupt-controller;
+		#interrupt-cells = <2>;
+		interrupt-parent = <&gpio6>; //GPIO_EAR_GND_SEL
+		interrupts = <11 IRQ_TYPE_LEVEL_HIGH>;
+
+		gpio-controller;
+		#gpio-cells = <2>;
+
+		//AVDD1-supply = <&buck3_reg>; //wm1811_ldo1_supplies
+		AVDD2-supply = <&smps4>; //VAP_IO_1.8V
+		DBVDD1-supply = <&smps4>; //VBATT acc to board file
+		DBVDD2-supply = <&smps4>; //VBATT acc to board file
+		DBVDD3-supply = <&smps4>; //VBATT acc to board file
+		//DCVDD-supply = <&buck3_reg>; //wm1811_ldo2_supplies
+		CPVDD-supply = <&smps4>; //VBATT acc to board file
+		//SPKVDD1-supply = <&buck3_reg>; //VBATT
+		//SPKVDD2-supply = <&buck3_reg>; //VBATT
+
+		wlf,gpio-cfg = <0x3 0x0 0x0 0x0 0x0 0x0 0x0 0x8000 0x0 0x0 0x0>;
+		wlf,micbias-cfg = <0x2f 0x29>;
+
+		wlf,ldo1ena = <&gpio2 13 GPIO_ACTIVE_HIGH>;
+		wlf,ldo2ena = <&gpio2 13 GPIO_ACTIVE_HIGH>;
+
+		wlf,ldoena-always-driven;
+		wlf,lineout1-se;
+		wlf,lineout2-se;
+		wlf,lineout1-feedback;
+	};
 };
 
-#include "twl6030.dtsi"
-#include "twl6030_omap4.dtsi"
 #include "twl6032.dtsi"
 
 &i2c2 {
@@ -535,6 +621,9 @@
 		};
 	};
 };
+
+#include "twl6030.dtsi"
+#include "twl6030_omap4.dtsi"
 
 &twl_usb_comparator {
 	usb-supply = <&vusb>;
@@ -613,4 +702,11 @@
 		interrupt-parent = <&gpio3>;
 		interrupts = <19 IRQ_TYPE_EDGE_FALLING>;
 	};
+};
+
+&mcbsp3 {
+	#sound-dai-cells = <0>;
+	pinctrl-names = "default";
+	pinctrl-0 = <&mcbsp3_pins>;
+	status = "okay";
 };

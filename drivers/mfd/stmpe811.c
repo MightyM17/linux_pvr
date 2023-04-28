@@ -215,8 +215,7 @@ static void stmpe811_adc_i2c_remove(struct i2c_client *client)
 	
 }
 
-static int stmpe811_adc_i2c_probe(struct i2c_client *client,
-						const struct i2c_device_id *id)
+static int stmpe811_adc_i2c_probe(struct i2c_client *client)
 {
 	struct stmpe811_adc_state *adc;
 	u8 data[2];
