@@ -216,6 +216,10 @@ static struct power_supply_attr power_supply_attrs[] = {
 	POWER_SUPPLY_ATTR(MANUFACTURE_YEAR),
 	POWER_SUPPLY_ATTR(MANUFACTURE_MONTH),
 	POWER_SUPPLY_ATTR(MANUFACTURE_DAY),
+	/* Local extensions */
+	POWER_SUPPLY_ATTR(USB_HC),
+	POWER_SUPPLY_ATTR(USB_OTG),
+	POWER_SUPPLY_ATTR(CHARGE_ENABLED),
 	/* Properties of type `const char *' */
 	POWER_SUPPLY_ATTR(MODEL_NAME),
 	POWER_SUPPLY_ATTR(MANUFACTURER),
@@ -249,11 +253,11 @@ static ssize_t power_supply_show_usb_type(struct device *dev,
 		usb_type = desc->usb_types[i];
 
 		if (value->intval == usb_type) {
-			count += sysfs_emit_at(buf, count, "[%s] ",
+			count += sprintf(buf + count, "[%s] ",
 					 POWER_SUPPLY_USB_TYPE_TEXT[usb_type]);
 			match = true;
 		} else {
-			count += sysfs_emit_at(buf, count, "%s ",
+			count += sprintf(buf + count, "%s ",
 					 POWER_SUPPLY_USB_TYPE_TEXT[usb_type]);
 		}
 	}
@@ -297,7 +301,7 @@ static ssize_t power_supply_show_property(struct device *dev,
 
 	if (ps_attr->text_values_len > 0 &&
 	    value.intval < ps_attr->text_values_len && value.intval >= 0) {
-		return sysfs_emit(buf, "%s\n", ps_attr->text_values[value.intval]);
+		return sprintf(buf, "%s\n", ps_attr->text_values[value.intval]);
 	}
 
 	switch (psp) {
@@ -306,10 +310,10 @@ static ssize_t power_supply_show_property(struct device *dev,
 						&value, buf);
 		break;
 	case POWER_SUPPLY_PROP_MODEL_NAME ... POWER_SUPPLY_PROP_SERIAL_NUMBER:
-		ret = sysfs_emit(buf, "%s\n", value.strval);
+		ret = sprintf(buf, "%s\n", value.strval);
 		break;
 	default:
-		ret = sysfs_emit(buf, "%d\n", value.intval);
+		ret = sprintf(buf, "%d\n", value.intval);
 	}
 
 	return ret;
@@ -427,7 +431,7 @@ void power_supply_init_attrs(struct device_type *dev_type)
 	}
 }
 
-static int add_prop_uevent(const struct device *dev, struct kobj_uevent_env *env,
+static int add_prop_uevent(struct device *dev, struct kobj_uevent_env *env,
 			   enum power_supply_property prop, char *prop_buf)
 {
 	int ret = 0;
@@ -438,7 +442,7 @@ static int add_prop_uevent(const struct device *dev, struct kobj_uevent_env *env
 	pwr_attr = &power_supply_attrs[prop];
 	dev_attr = &pwr_attr->dev_attr;
 
-	ret = power_supply_show_property((struct device *)dev, dev_attr, prop_buf);
+	ret = power_supply_show_property(dev, dev_attr, prop_buf);
 	if (ret == -ENODEV || ret == -ENODATA) {
 		/*
 		 * When a battery is absent, we expect -ENODEV. Don't abort;
@@ -458,9 +462,9 @@ static int add_prop_uevent(const struct device *dev, struct kobj_uevent_env *env
 			      pwr_attr->prop_name, prop_buf);
 }
 
-int power_supply_uevent(const struct device *dev, struct kobj_uevent_env *env)
+int power_supply_uevent(struct device *dev, struct kobj_uevent_env *env)
 {
-	const struct power_supply *psy = dev_get_drvdata(dev);
+	struct power_supply *psy = dev_get_drvdata(dev);
 	int ret = 0, j;
 	char *prop_buf;
 

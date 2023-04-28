@@ -20,7 +20,7 @@ obj-$(CONFIG_SOC_DRA7XX)		+= $(clk-common) clk-7xx.o \
 					   dpll44xx.o
 
 obj-$(CONFIG_SOC_AM43XX)		+= $(clk-common) dpll3xxx.o clk-43xx.o
-
+obj-$(CONFIG_CLK_TWL6030)		+= $(clk-common) clk-6030.o
 endif	# CONFIG_ARCH_OMAP2PLUS
 
 obj-$(CONFIG_COMMON_CLK_TI_ADPLL)	+= adpll.o

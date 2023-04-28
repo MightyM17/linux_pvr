@@ -23,6 +23,7 @@ menuconfig COMMON_CLK
 	depends on !HAVE_LEGACY_CLK
 	select HAVE_CLK_PREPARE
 	select HAVE_CLK
+	select SRCU
 	select RATIONAL
 	help
 	  The common clock framework is a single definition of struct
@@ -91,7 +92,7 @@ config COMMON_CLK_RK808
 config COMMON_CLK_HI655X
 	tristate "Clock driver for Hi655x" if EXPERT
 	depends on (MFD_HI655X_PMIC || COMPILE_TEST)
-	select REGMAP
+	depends on REGMAP
 	default MFD_HI655X_PMIC
 	help
 	  This driver supports the hi655x PMIC clock. This
@@ -276,6 +277,12 @@ config COMMON_CLK_S2MPS11
 	  This driver supports S2MPS11/S2MPS14/S5M8767 crystal oscillator
 	  clock. These multi-function devices have two (S2MPS14) or three
 	  (S2MPS11, S5M8767) fixed-rate oscillators, clocked at 32KHz each.
+
+config CLK_TWL6030
+	tristate "Clock driver for twl6030"
+	depends on TWL4030_CORE
+	help
+	  Enable the TWL6030 clock CLK32KAUDIO.
 
 config CLK_TWL6040
 	tristate "External McPDM functional clock from twl6040"

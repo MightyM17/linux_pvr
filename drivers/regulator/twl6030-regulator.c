@@ -67,7 +67,6 @@ struct twlreg_info {
 #define TWL6030_CFG_STATE_SLEEP	0x03
 #define TWL6030_CFG_STATE_GRP_SHIFT	5
 #define TWL6030_CFG_STATE_APP_SHIFT	2
-#define TWL6030_CFG_STATE_MASK		0x03
 #define TWL6030_CFG_STATE_APP_MASK	(0x03 << TWL6030_CFG_STATE_APP_SHIFT)
 #define TWL6030_CFG_STATE_APP(v)	(((v) & TWL6030_CFG_STATE_APP_MASK) >>\
 						TWL6030_CFG_STATE_APP_SHIFT)
@@ -129,13 +128,12 @@ static int twl6030reg_is_enabled(struct regulator_dev *rdev)
 		if (grp < 0)
 			return grp;
 		grp &= P1_GRP_6030;
-		val = twlreg_read(info, TWL_MODULE_PM_RECEIVER, VREG_STATE);
-		val = TWL6030_CFG_STATE_APP(val);
 	} else {
-		val = twlreg_read(info, TWL_MODULE_PM_RECEIVER, VREG_STATE);
-		val &= TWL6030_CFG_STATE_MASK;
 		grp = 1;
 	}
+
+	val = twlreg_read(info, TWL_MODULE_PM_RECEIVER, VREG_STATE);
+	val = TWL6030_CFG_STATE_APP(val);
 
 	return grp && (val == TWL6030_CFG_STATE_ON);
 }
@@ -189,12 +187,7 @@ static int twl6030reg_get_status(struct regulator_dev *rdev)
 
 	val = twlreg_read(info, TWL_MODULE_PM_RECEIVER, VREG_STATE);
 
-	if (info->features & TWL6032_SUBCLASS)
-		val &= TWL6030_CFG_STATE_MASK;
-	else
-		val = TWL6030_CFG_STATE_APP(val);
-
-	switch (val) {
+	switch (TWL6030_CFG_STATE_APP(val)) {
 	case TWL6030_CFG_STATE_ON:
 		return REGULATOR_STATUS_NORMAL;
 
@@ -303,6 +296,13 @@ static const struct regulator_ops twl6030fixed_ops = {
 
 	.set_mode	= twl6030reg_set_mode,
 
+	.get_status	= twl6030reg_get_status,
+};
+
+static struct regulator_ops twl6030_fixed_resource = {
+	.enable	= twl6030reg_enable,
+	.disable	= twl6030reg_disable,
+	.is_enabled	= twl6030reg_is_enabled,
 	.get_status	= twl6030reg_get_status,
 };
 
@@ -537,7 +537,6 @@ static const struct twlreg_info TWL6030_INFO_##label = { \
 #define TWL6032_ADJUSTABLE_LDO(label, offset) \
 static const struct twlreg_info TWL6032_INFO_##label = { \
 	.base = offset, \
-	.features = TWL6032_SUBCLASS, \
 	.desc = { \
 		.name = #label, \
 		.id = TWL6032_REG_##label, \
@@ -570,7 +569,6 @@ static const struct twlreg_info TWLFIXED_INFO_##label = { \
 #define TWL6032_ADJUSTABLE_SMPS(label, offset) \
 static const struct twlreg_info TWLSMPS_INFO_##label = { \
 	.base = offset, \
-	.features = TWL6032_SUBCLASS, \
 	.desc = { \
 		.name = #label, \
 		.id = TWL6032_REG_##label, \
@@ -578,6 +576,19 @@ static const struct twlreg_info TWLSMPS_INFO_##label = { \
 		.ops = &twlsmps_ops, \
 		.type = REGULATOR_VOLTAGE, \
 		.owner = THIS_MODULE, \
+		}, \
+	}
+
+#define TWL6030_FIXED_RESOURCE(label, offset, turnon_delay) \
+static struct twlreg_info TWLRES_INFO_##label = { \
+	.base = offset, \
+	.desc = { \
+		.name = #label, \
+		.id = TWL6030_REG_##label, \
+		.ops = &twl6030_fixed_resource, \
+		.type = REGULATOR_VOLTAGE, \
+		.owner = THIS_MODULE, \
+		.enable_time = turnon_delay, \
 		}, \
 	}
 
@@ -610,6 +621,7 @@ TWL6030_FIXED_LDO(VDAC, 0x64, 1800, 0);
 TWL6030_FIXED_LDO(VUSB, 0x70, 3300, 0);
 TWL6030_FIXED_LDO(V1V8, 0x16, 1800, 0);
 TWL6030_FIXED_LDO(V2V1, 0x1c, 2100, 0);
+TWL6030_FIXED_RESOURCE(CLK32KG, 0x8C, 0);
 TWL6032_ADJUSTABLE_SMPS(SMPS3, 0x34);
 TWL6032_ADJUSTABLE_SMPS(SMPS4, 0x10);
 TWL6032_ADJUSTABLE_SMPS(VIO, 0x16);
@@ -641,6 +653,7 @@ static u8 twl_get_smps_mult(void)
 #define TWL6030_OF_MATCH(comp, label) TWL_OF_MATCH(comp, TWL6030, label)
 #define TWL6032_OF_MATCH(comp, label) TWL_OF_MATCH(comp, TWL6032, label)
 #define TWLFIXED_OF_MATCH(comp, label) TWL_OF_MATCH(comp, TWLFIXED, label)
+#define TWLRES_OF_MATCH(comp, label) TWL_OF_MATCH(comp, TWLRES, label)
 #define TWLSMPS_OF_MATCH(comp, label) TWL_OF_MATCH(comp, TWLSMPS, label)
 
 static const struct of_device_id twl_of_match[] = {
@@ -668,6 +681,7 @@ static const struct of_device_id twl_of_match[] = {
 	TWLFIXED_OF_MATCH("ti,twl6030-vusb", VUSB),
 	TWLFIXED_OF_MATCH("ti,twl6030-v1v8", V1V8),
 	TWLFIXED_OF_MATCH("ti,twl6030-v2v1", V2V1),
+	TWLRES_OF_MATCH("ti,twl6030-clk32kg", CLK32KG),
 	TWLSMPS_OF_MATCH("ti,twl6032-smps3", SMPS3),
 	TWLSMPS_OF_MATCH("ti,twl6032-smps4", SMPS4),
 	TWLSMPS_OF_MATCH("ti,twl6032-vio", VIO),
