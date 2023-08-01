@@ -4153,7 +4153,7 @@ static int wm8994_component_probe(struct snd_soc_component *component)
 	struct wm8994_priv *wm8994 = snd_soc_component_get_drvdata(component);
 	unsigned int reg;
 	int ret, i;
-
+	dev_err(component->dev, "WM8994: Component probe began\n");
 	snd_soc_component_init_regmap(component, control->regmap);
 
 	wm8994->hubs.component = component;
@@ -4344,7 +4344,7 @@ static int wm8994_component_probe(struct snd_soc_component *component)
 
 	/* Make sure we can read from the GPIOs if they're inputs */
 	pm_runtime_get_sync(component->dev);
-
+	dev_err(component->dev, "WM8994: Component probe between\n");
 	/* Remember if AIFnLRCLK is configured as a GPIO.  This should be
 	 * configured on init - if a system wants to do this dynamically
 	 * at runtime we can deal with that then.
@@ -4544,10 +4544,11 @@ static int wm8994_component_probe(struct snd_soc_component *component)
 					ARRAY_SIZE(wm8958_intercon));
 		break;
 	}
-
+	dev_err(component->dev, "WM8994: Component probe ended\n");
 	return 0;
 
 err_irq:
+	dev_err(component->dev, "WM8994: err irq\n");
 	if (wm8994->jackdet)
 		wm8994_free_irq(wm8994->wm8994, WM8994_IRQ_GPIO(6), wm8994);
 	wm8994_free_irq(wm8994->wm8994, WM8994_IRQ_MIC2_SHRT, wm8994);
@@ -4645,15 +4646,17 @@ static int wm8994_probe(struct platform_device *pdev)
 		dev_err(&pdev->dev, "Failed to get clocks: %d\n", ret);
 		return ret;
 	}
+	dev_err(&pdev->dev, "WM8994: Got clocks yay\n");
 
 	pm_runtime_enable(&pdev->dev);
 	pm_runtime_idle(&pdev->dev);
+	dev_err(&pdev->dev, "WM8994: Runtime done\n");
 
 	ret = devm_snd_soc_register_component(&pdev->dev, &soc_component_dev_wm8994,
 			wm8994_dai, ARRAY_SIZE(wm8994_dai));
 	if (ret < 0)
 		pm_runtime_disable(&pdev->dev);
-
+	dev_err(&pdev->dev, "WM8994: Probed successfully\n");
 	return ret;
 }
 

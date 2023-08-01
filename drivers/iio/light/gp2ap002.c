@@ -19,6 +19,9 @@
  * Based partly on the code in LG Electronics GP2AP00200F driver by
  * Kenobi Lee <sungyoung.lee@lge.com> and EunYoung Cho <ey.cho@lge.com>
  */
+
+#define DEBUG
+
 #include <linux/module.h>
 #include <linux/i2c.h>
 #include <linux/regmap.h>

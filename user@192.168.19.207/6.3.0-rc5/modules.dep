@@ -1,0 +1,574 @@
+kernel/drivers/counter/counter.ko.xz:
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bca/brcmfmac-bca.ko.xz: kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko.xz kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_ss_lb.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/media/rc/keymaps/rc-avermedia.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-reddo.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-snapstream-firefly.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko.xz:
+kernel/drivers/net/ppp/pppoe.ko.xz: kernel/drivers/net/ppp/pppox.ko.xz kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/drivers/net/ppp/ppp_deflate.ko.xz: kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/sound/soc/ti/snd-soc-omap-mcpdm.ko.xz: kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz
+kernel/drivers/usb/host/ehci-omap.ko.xz:
+kernel/drivers/bluetooth/btsdio.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/input/keyboard/atkbd.ko.xz: kernel/drivers/input/serio/serio.ko.xz kernel/drivers/input/vivaldi-fmap.ko.xz kernel/drivers/input/serio/libps2.ko.xz
+kernel/drivers/input/touchscreen/ti_am335x_tsc.ko.xz: kernel/drivers/mfd/ti_am335x_tscadc.ko.xz
+kernel/drivers/media/rc/keymaps/rc-total-media-in-hand.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-dvbsky.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/sound/soc/codecs/snd-soc-tlv320aic3x-i2c.ko.xz: kernel/sound/soc/codecs/snd-soc-tlv320aic3x.ko.xz
+kernel/drivers/gpu/drm/pvrsgx/1.17.4948957/eurasia_km/pvrsrvkm_am3517_sgx530_125.ko.xz:
+kernel/drivers/crypto/omap-des.ko.xz: kernel/lib/crypto/libdes.ko.xz kernel/drivers/crypto/omap-crypto.ko.xz kernel/crypto/crypto_engine.ko.xz
+kernel/drivers/media/rc/keymaps/rc-tevii-nec.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-twinhan-dtv-cab-ci.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/led-class.ko.xz:
+kernel/drivers/net/usb/ax88179_178a.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz
+kernel/sound/soc/codecs/snd-soc-tlv320aic3x.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-digitalnow-tinytwin.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-pixelview-mk12.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/regulator/tps62360-regulator.ko.xz:
+kernel/drivers/net/wireless/ti/wlcore/wlcore.ko.xz: kernel/net/mac80211/mac80211.ko.xz kernel/lib/crypto/libarc4.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/net/netfilter/nft_chain_nat.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/w1/slaves/w1_ds250x.ko.xz: kernel/drivers/w1/wire.ko.xz kernel/drivers/connector/cn.ko.xz kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/media/rc/keymaps/rc-dntv-live-dvb-t.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/crypto/omap-crypto.ko.xz:
+kernel/drivers/power/supply/bq24190_charger.ko.xz:
+kernel/drivers/gpu/drm/panel/panel-sharp-ls037v7dw01.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-hisi-poplar.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/leds-cpcap.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/sound/soc/codecs/snd-soc-cpcap.ko.xz:
+kernel/drivers/bluetooth/hci_uart.ko.xz: kernel/drivers/bluetooth/btbcm.ko.xz kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/md/dm-integrity.ko.xz: kernel/crypto/async_tx/async_xor.ko.xz kernel/crypto/async_tx/async_tx.ko.xz kernel/crypto/xor.ko.xz kernel/arch/arm/lib/xor-neon.ko.xz
+kernel/drivers/input/rmi4/rmi_core.ko.xz:
+kernel/drivers/net/usb/net1080.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz
+kernel/drivers/usb/dwc3/dwc3.ko.xz: kernel/drivers/usb/roles/roles.ko.xz
+kernel/drivers/usb/serial/ftdi_sio.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-avermedia-dvbt.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/usb/usbnet.ko.xz:
+kernel/drivers/usb/serial/usb-serial-simple.ko.xz:
+kernel/drivers/video/backlight/pandora_bl.ko.xz:
+kernel/drivers/leds/leds-lp5523.ko.xz: kernel/drivers/leds/leds-lp55xx-common.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/net/can/can.ko.xz:
+kernel/drivers/power/supply/isp1704_charger.ko.xz:
+kernel/drivers/gpu/drm/drm_dma_helper.ko.xz:
+kernel/drivers/usb/mon/usbmon.ko.xz:
+kernel/drivers/media/rc/gpio-ir-tx.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv4/netfilter/iptable_mangle.ko.xz: kernel/net/ipv4/netfilter/ip_tables.ko.xz kernel/net/netfilter/x_tables.ko.xz
+kernel/crypto/crypto_engine.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_mass_storage.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/iio/pressure/bmp280-i2c.ko.xz: kernel/drivers/iio/pressure/bmp280.ko.xz
+kernel/net/bluetooth/bluetooth.ko.xz: kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/net/usb/cdc-phonet.ko.xz: kernel/net/phonet/phonet.ko.xz
+kernel/drivers/net/ppp/pppox.ko.xz: kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/drivers/net/wireless/ti/wlcore/wlcore_spi.ko.xz:
+kernel/crypto/des_generic.ko.xz: kernel/lib/crypto/libdes.ko.xz
+kernel/drivers/net/can/c_can/c_can_platform.ko.xz: kernel/drivers/net/can/c_can/c_can.ko.xz kernel/drivers/net/can/dev/can-dev.ko.xz
+kernel/drivers/iio/pressure/bmp280.ko.xz:
+kernel/drivers/block/zram/zram.ko.xz: kernel/mm/zsmalloc.ko.xz
+kernel/drivers/media/rc/keymaps/rc-minix-neo.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/sound/soc/ti/snd-soc-ti-edma.ko.xz:
+kernel/drivers/misc/pci_endpoint_test.ko.xz:
+kernel/drivers/input/misc/cpcap-pwrbutton.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-imon-pad.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/leds-pwm.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/drivers/usb/gadget/function/usb_f_phonet.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/net/phonet/phonet.ko.xz kernel/drivers/usb/gadget/function/u_ether.ko.xz
+kernel/drivers/media/rc/keymaps/rc-videomate-s350.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-nec-terratec-cinergy-xs.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/gpu/drm/panel/panel-dsi-cm.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-dntv-live-dvbt-pro.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/ipvs/ip_vs.ko.xz: kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/input/serio/serio.ko.xz:
+kernel/drivers/net/macvlan.ko.xz:
+kernel/net/can/can-bcm.ko.xz: kernel/net/can/can.ko.xz
+kernel/drivers/hwmon/tmp102.ko.xz: kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/usb/serial/pl2303.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-kworld-plus-tv-analog.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/dvb-core/dvb-core.ko.xz:
+kernel/drivers/bluetooth/btmrvl_sdio.ko.xz: kernel/drivers/bluetooth/btmrvl.ko.xz kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/net/netfilter/nft_limit.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/fs/autofs/autofs4.ko.xz:
+kernel/drivers/input/misc/pwm-vibra.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-msi-digivox-ii.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-dtt200u.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/input/mousedev.ko.xz:
+kernel/drivers/gpu/drm/panel/panel-nec-nl8048hl11.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-total-media-in-hand-02.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/nfnetlink.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-encore-enltv2.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/trigger/ledtrig-oneshot.ko.xz:
+kernel/drivers/net/wireguard/wireguard.ko.xz: kernel/net/ipv4/udp_tunnel.ko.xz kernel/net/ipv6/ip6_udp_tunnel.ko.xz kernel/lib/crypto/libchacha20poly1305.ko.xz kernel/arch/arm/crypto/poly1305-arm.ko.xz kernel/arch/arm/crypto/chacha-neon.ko.xz kernel/net/ipv6/ipv6.ko.xz kernel/arch/arm/crypto/curve25519-neon.ko.xz kernel/lib/crypto/libcurve25519-generic.ko.xz
+kernel/sound/soc/ti/snd-soc-ti-udma.ko.xz:
+kernel/arch/arm/crypto/poly1305-arm.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-msi-tvanywhere-plus.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/ata/libahci.ko.xz: kernel/drivers/ata/libata.ko.xz
+kernel/drivers/remoteproc/omap_remoteproc.ko.xz:
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/cyw/brcmfmac-cyw.ko.xz: kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko.xz kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/net/netfilter/xt_ipvs.ko.xz: kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/ipvs/ip_vs.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/mfd/ti_am335x_tscadc.ko.xz:
+kernel/drivers/extcon/extcon-palmas.ko.xz:
+kernel/drivers/rtc/rtc-cpcap.ko.xz:
+kernel/drivers/input/touchscreen/tsc2004.ko.xz: kernel/drivers/input/touchscreen/tsc200x-core.ko.xz
+kernel/net/ipv6/sit.ko.xz: kernel/net/ipv4/tunnel4.ko.xz kernel/net/ipv6/ipv6.ko.xz kernel/net/ipv4/ip_tunnel.ko.xz
+kernel/net/sched/cls_flower.ko.xz:
+kernel/drivers/input/touchscreen/tsc2005.ko.xz: kernel/drivers/input/touchscreen/tsc200x-core.ko.xz
+kernel/drivers/connector/cn.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-fusionhdtv-mce.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-encore-enltv-fm53.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-apac-viewcomp.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-trekstor.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/adc/twl4030-madc.ko.xz:
+kernel/drivers/input/touchscreen/tsc2007.ko.xz:
+kernel/drivers/char/hw_random/omap3-rom-rng.ko.xz: kernel/drivers/char/hw_random/rng-core.ko.xz
+kernel/drivers/gpu/drm/tilcdc/tilcdc.ko.xz: kernel/drivers/gpu/drm/drm_dma_helper.ko.xz
+kernel/drivers/gpu/drm/panel/panel-tpo-td028ttec1.ko.xz:
+kernel/lib/raid6/raid6_pq.ko.xz:
+kernel/drivers/leds/leds-gpio.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/drivers/video/backlight/gpio_backlight.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_uac1.ko.xz: kernel/drivers/usb/gadget/function/u_audio.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/media/rc/keymaps/rc-beelink-gs1.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/sched/sch_ingress.ko.xz:
+kernel/fs/exfat/exfat.ko.xz:
+kernel/crypto/xor.ko.xz: kernel/arch/arm/lib/xor-neon.ko.xz
+kernel/crypto/crc32_generic.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_uac2.ko.xz: kernel/drivers/usb/gadget/function/u_audio.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/media/rc/keymaps/rc-pv951.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/usb/class/cdc-acm.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-terratec-cinergy-c-pci.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-wetek-play2.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/sound/soc/ti/snd-soc-omap-abe-twl6040.ko.xz: kernel/sound/soc/codecs/snd-soc-twl6040.ko.xz kernel/sound/soc/ti/snd-soc-omap-mcpdm.ko.xz kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz
+kernel/drivers/usb/dwc3/dwc3-omap.ko.xz:
+kernel/drivers/bluetooth/hci_vhci.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/lib/crypto/libchacha20poly1305.ko.xz: kernel/arch/arm/crypto/poly1305-arm.ko.xz kernel/arch/arm/crypto/chacha-neon.ko.xz
+kernel/drivers/pwm/pwm-twl-led.ko.xz:
+kernel/drivers/media/i2c/mt9p031.ko.xz: kernel/drivers/media/v4l2-core/v4l2-fwnode.ko.xz kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz kernel/drivers/media/i2c/aptina-pll.ko.xz
+kernel/drivers/iio/accel/st_accel.ko.xz: kernel/drivers/iio/common/st_sensors/st_sensors.ko.xz
+kernel/drivers/bluetooth/bcm203x.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/media/rc/keymaps/rc-su3000.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-dib0700-nec.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/bluetooth/btusb.ko.xz: kernel/drivers/bluetooth/btintel.ko.xz kernel/drivers/bluetooth/btbcm.ko.xz kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/hsi/clients/ssi_protocol.ko.xz: kernel/net/phonet/phonet.ko.xz kernel/drivers/hsi/controllers/omap_ssi.ko.xz kernel/drivers/hsi/hsi.ko.xz
+kernel/drivers/media/rc/keymaps/rc-dvico-portable.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-tt-1500.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/regulator/lm363x-regulator.ko.xz:
+kernel/lib/crypto/libcurve25519.ko.xz:
+kernel/drivers/spi/spi-bitbang.ko.xz:
+kernel/net/sunrpc/auth_gss/auth_rpcgss.ko.xz: kernel/net/sunrpc/sunrpc.ko.xz
+kernel/drivers/ata/ahci_dm816.ko.xz: kernel/drivers/ata/libahci_platform.ko.xz kernel/drivers/ata/libahci.ko.xz kernel/drivers/ata/libata.ko.xz
+kernel/drivers/iio/adc/ti_am335x_adc.ko.xz: kernel/drivers/mfd/ti_am335x_tscadc.ko.xz
+kernel/net/bluetooth/rfcomm/rfcomm.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/leds/leds-lp55xx-common.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/net/netfilter/xt_tcpmss.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/usb/serial/usb_wwan.ko.xz:
+kernel/sound/usb/snd-usbmidi-lib.ko.xz: kernel/sound/core/snd-rawmidi.ko.xz
+kernel/arch/arm/crypto/chacha-neon.ko.xz:
+kernel/net/sched/cls_matchall.ko.xz:
+kernel/net/netfilter/xt_addrtype.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/crypto/jitterentropy_rng.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-msi-tvanywhere.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-powercolor-real-angel.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/vxlan/vxlan.ko.xz: kernel/net/ipv4/udp_tunnel.ko.xz kernel/net/ipv6/ip6_udp_tunnel.ko.xz
+kernel/drivers/power/supply/rx51_battery.ko.xz:
+kernel/drivers/usb/gadget/libcomposite.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-astrometa-t2hybrid.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-nebula.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/trigger/ledtrig-default-on.ko.xz:
+kernel/net/wireless/cfg80211.ko.xz: kernel/net/rfkill/rfkill.ko.xz
+kernel/net/phonet/phonet.ko.xz:
+kernel/drivers/iio/industrialio-sw-device.ko.xz: kernel/drivers/iio/industrialio-configfs.ko.xz
+kernel/drivers/media/rc/keymaps/rc-winfast.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/ata/libahci_platform.ko.xz: kernel/drivers/ata/libahci.ko.xz kernel/drivers/ata/libata.ko.xz
+kernel/drivers/iio/common/st_sensors/st_sensors_i2c.ko.xz:
+kernel/drivers/input/joydev.ko.xz:
+kernel/drivers/usb/phy/phy-am335x-control.ko.xz:
+kernel/drivers/usb/phy/phy-am335x.ko.xz: kernel/drivers/usb/phy/phy-am335x-control.ko.xz kernel/drivers/usb/phy/phy-generic.ko.xz
+kernel/drivers/input/misc/palmas-pwrbutton.ko.xz:
+kernel/drivers/bluetooth/btintel.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/media/rc/keymaps/rc-videomate-tv-pvr.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/common/st_sensors/st_sensors.ko.xz:
+kernel/net/netfilter/nft_reject_inet.ko.xz: kernel/net/ipv6/netfilter/nf_reject_ipv6.ko.xz kernel/net/ipv6/ipv6.ko.xz kernel/net/netfilter/nft_reject.ko.xz kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/net/ipv4/netfilter/ip_tables.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/media/rc/keymaps/rc-videostrong-kii-pro.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/i2c/ad5820.ko.xz: kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/media/rc/keymaps/rc-asus-ps3-100.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/leds-pca963x.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/crypto/cryptd.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-flyvideo.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-pixelview-002t.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-tivo.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/nf_conntrack.ko.xz: kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/net/netfilter/xt_mark.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/input/input-leds.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/wcc/brcmfmac-wcc.ko.xz: kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko.xz kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/sound/core/oss/snd-pcm-oss.ko.xz: kernel/sound/core/oss/snd-mixer-oss.ko.xz
+kernel/sound/soc/ti/snd-soc-rx51.ko.xz: kernel/sound/soc/ti/snd-soc-omap-mcbsp.ko.xz kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz
+kernel/net/netfilter/nft_fib.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/drivers/media/rc/keymaps/rc-adstech-dvb-t-pci.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/i2c/ccs/ccs.ko.xz: kernel/drivers/media/i2c/ccs-pll.ko.xz kernel/drivers/media/v4l2-core/v4l2-fwnode.ko.xz kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/leds/trigger/ledtrig-gpio.ko.xz:
+kernel/crypto/af_alg.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-lme2510.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/trigger/ledtrig-heartbeat.ko.xz:
+kernel/drivers/net/wireless/ti/wlcore/wlcore_sdio.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-alink-dtu-m.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/xt_tcpudp.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/media/rc/keymaps/rc-avermedia-rm-ks.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/input/keyboard/omap4-keypad.ko.xz: kernel/drivers/input/matrix-keymap.ko.xz
+kernel/net/netfilter/xt_comment.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/usb/gadget/function/usb_f_acm.ko.xz: kernel/drivers/usb/gadget/function/u_serial.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko.xz: kernel/net/sunrpc/auth_gss/auth_rpcgss.ko.xz kernel/net/sunrpc/sunrpc.ko.xz
+kernel/drivers/media/rc/keymaps/rc-x96max.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/usb/cdc_ether.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz
+kernel/drivers/usb/gadget/function/usb_f_ecm.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_ether.ko.xz
+kernel/drivers/gpu/drm/pvrsgx/1.17.4948957/eurasia_km/pvrsrvkm_omap3630_sgx530_125.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-tanix-tx3mini.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv4/netfilter/iptable_nat.ko.xz: kernel/net/ipv4/netfilter/ip_tables.ko.xz kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/media/rc/keymaps/rc-kworld-pc150u.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/usb/gadget/legacy/g_ffs.ko.xz: kernel/drivers/usb/gadget/function/usb_f_fs.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/usb/roles/roles.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-technisat-ts35.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/industrialio-configfs.ko.xz:
+kernel/net/bluetooth/hidp/hidp.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/mm/zsmalloc.ko.xz:
+kernel/net/ipv4/netfilter/iptable_filter.ko.xz: kernel/net/ipv4/netfilter/ip_tables.ko.xz kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/usb/gadget/function/usb_f_fs.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/bluetooth/btbcm.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/media/rc/keymaps/rc-mecool-kiii-pro.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/sound/soc/ti/snd-soc-omap-mcbsp.ko.xz: kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz
+kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz:
+kernel/net/ipv4/netfilter/ipt_REJECT.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/media/rc/ir-rx51.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/usb/zaurus.ko.xz: kernel/drivers/net/usb/cdc_ether.ko.xz kernel/drivers/net/usb/usbnet.ko.xz
+kernel/net/netfilter/nft_nat.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/media/rc/keymaps/rc-behold-columbus.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/radio/si4713/si4713.ko.xz: kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/media/mc/mc.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/drivers/media/platform/ti/omap3isp/omap3-isp.ko.xz: kernel/drivers/media/common/videobuf2/videobuf2-v4l2.ko.xz kernel/drivers/media/common/videobuf2/videobuf2-dma-contig.ko.xz kernel/drivers/media/common/videobuf2/videobuf2-memops.ko.xz kernel/drivers/media/common/videobuf2/videobuf2-common.ko.xz kernel/drivers/media/v4l2-core/v4l2-fwnode.ko.xz kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/media/mc/mc.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/drivers/input/serio/libps2.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-zx-irdec.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-it913x-v1.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-it913x-v2.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/common/videobuf2/videobuf2-v4l2.ko.xz: kernel/drivers/media/common/videobuf2/videobuf2-common.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/net/ppp/ppp_synctty.ko.xz: kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/drivers/media/rc/keymaps/rc-hisi-tv-demo.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv4/ip_tunnel.ko.xz:
+kernel/drivers/input/serio/serport.ko.xz: kernel/drivers/input/serio/serio.ko.xz
+kernel/crypto/xxhash_generic.ko.xz:
+kernel/drivers/usb/musb/musb_dsps.ko.xz:
+kernel/drivers/gpu/drm/bridge/ti-tpd12s015.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-msi-digivox-iii.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/mc/mc.ko.xz:
+kernel/sound/core/snd-rawmidi.ko.xz:
+kernel/drivers/input/misc/tps65218-pwrbutton.ko.xz:
+kernel/drivers/input/vivaldi-fmap.ko.xz:
+kernel/net/rfkill/rfkill-gpio.ko.xz: kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/media/rc/keymaps/rc-terratec-slim-2.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/usb/gadget/function/u_serial.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-hauppauge.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/usb/smsc95xx.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz
+kernel/drivers/media/rc/keymaps/rc-genius-tvgo-a11mce.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/common/videobuf2/videobuf2-memops.ko.xz: kernel/drivers/media/common/videobuf2/videobuf2-common.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/net/wireless/ti/wl12xx/wl12xx.ko.xz: kernel/drivers/net/wireless/ti/wlcore/wlcore.ko.xz kernel/net/mac80211/mac80211.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz kernel/lib/crypto/libarc4.ko.xz
+kernel/net/netfilter/nf_nat.ko.xz: kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/net/usb/r8153_ecm.ko.xz: kernel/drivers/net/usb/cdc_ether.ko.xz kernel/drivers/net/usb/usbnet.ko.xz
+kernel/drivers/gpu/drm/panel/panel-simple.ko.xz:
+kernel/net/ipv6/netfilter/ip6table_nat.ko.xz: kernel/net/ipv6/netfilter/ip6_tables.ko.xz kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/gpu/drm/panel/panel-lg-lb035q02.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pixelview-new.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/power/supply/smb347-charger.ko.xz:
+kernel/drivers/power/supply/bq27xxx_battery_i2c.ko.xz: kernel/drivers/power/supply/bq27xxx_battery.ko.xz
+kernel/drivers/media/rc/keymaps/rc-real-audio-220-32-keys.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-flydvb.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko.xz: kernel/drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/usb/dwc3/dwc3-haps.ko.xz:
+kernel/net/802/p8022.ko.xz: kernel/net/llc/llc.ko.xz
+kernel/lib/crypto/libcurve25519-generic.ko.xz:
+kernel/drivers/usb/storage/usb-storage.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-tanix-tx5max.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv4/udp_tunnel.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-em-terratec.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/lib/crypto/libarc4.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-avertv-303.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-terratec-slim.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-behold.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/pwm/pwm-tiehrpwm.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-manli.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/v4l2-core/v4l2-async.ko.xz: kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/net/bluetooth/bnep/bnep.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/net/netfilter/xt_TCPMSS.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/usb/gadget/function/u_audio.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/media/rc/ir-spi.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/usb/cdc_ncm.ko.xz: kernel/drivers/net/usb/cdc_ether.ko.xz kernel/drivers/net/usb/usbnet.ko.xz
+kernel/fs/nfs/nfs.ko.xz: kernel/fs/lockd/lockd.ko.xz kernel/net/sunrpc/sunrpc.ko.xz kernel/fs/nfs_common/grace.ko.xz
+kernel/crypto/async_tx/async_tx.ko.xz:
+kernel/drivers/pwm/pwm-tiecap.ko.xz:
+kernel/drivers/input/touchscreen/edt-ft5x06.ko.xz:
+kernel/sound/soc/codecs/snd-soc-tpa6130a2.ko.xz:
+kernel/drivers/rtc/rtc-ds1307.ko.xz: kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/media/rc/keymaps/rc-ati-x10.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-avermedia-m733a-rm-k6.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/ipvlan/ipvlan.ko.xz: kernel/net/ipv6/ipv6.ko.xz
+kernel/drivers/media/rc/keymaps/rc-streamzap.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/leds/trigger/ledtrig-timer.ko.xz:
+kernel/drivers/net/ppp/ppp_generic.ko.xz: kernel/drivers/net/slip/slhc.ko.xz
+kernel/drivers/net/wireless/ti/wl1251/wl1251.ko.xz: kernel/net/mac80211/mac80211.ko.xz kernel/lib/crypto/libarc4.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/net/ipv6/ip6_udp_tunnel.ko.xz:
+kernel/drivers/usb/phy/phy-generic.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-terratec-cinergy-s2-hd.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/light/isl29028.ko.xz:
+kernel/drivers/usb/dwc3/dwc3-of-simple.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_rndis.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_ether.ko.xz
+kernel/drivers/media/common/videobuf2/videobuf2-common.ko.xz: kernel/drivers/media/mc/mc.ko.xz
+kernel/net/netfilter/nf_tables.ko.xz: kernel/net/netfilter/nfnetlink.ko.xz
+kernel/drivers/char/hw_random/rng-core.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_midi.ko.xz: kernel/sound/core/snd-rawmidi.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/hid/hid-generic.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pixelview.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-medion-x10-or2x.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-wetek-hub.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/industrialio-sw-trigger.ko.xz: kernel/drivers/iio/industrialio-configfs.ko.xz
+kernel/net/netfilter/xt_MASQUERADE.ko.xz: kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/net/sched/act_police.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pinnacle-grey.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-digittrade.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-odroid.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/pci/endpoint/functions/pci-epf-test.ko.xz:
+kernel/drivers/crypto/omap-sham.ko.xz: kernel/crypto/crypto_engine.ko.xz
+kernel/sound/soc/ti/snd-soc-omap-hdmi.ko.xz: kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz
+kernel/drivers/media/v4l2-core/videodev.ko.xz: kernel/drivers/media/mc/mc.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/net/sched/act_gact.ko.xz:
+kernel/drivers/net/wireless/ti/wl1251/wl1251_spi.ko.xz: kernel/drivers/net/wireless/ti/wl1251/wl1251.ko.xz kernel/net/mac80211/mac80211.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz kernel/lib/crypto/libarc4.ko.xz
+kernel/net/802/stp.ko.xz: kernel/net/llc/llc.ko.xz
+kernel/crypto/pcbc.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-budget-ci-old.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/usb/serial/option.ko.xz: kernel/drivers/usb/serial/usb_wwan.ko.xz
+kernel/drivers/media/rc/pwm-ir-tx.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/ata/ahci_platform.ko.xz: kernel/drivers/ata/libahci_platform.ko.xz kernel/drivers/ata/libahci.ko.xz kernel/drivers/ata/libata.ko.xz
+kernel/net/netfilter/nft_masq.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/usb/host/xhci-hcd.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-vega-s9x.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/common/videobuf2/videobuf2-dma-contig.ko.xz: kernel/drivers/media/common/videobuf2/videobuf2-memops.ko.xz kernel/drivers/media/common/videobuf2/videobuf2-common.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/input/keyboard/twl4030_keypad.ko.xz: kernel/drivers/input/matrix-keymap.ko.xz
+kernel/drivers/hsi/controllers/omap_ssi.ko.xz: kernel/drivers/hsi/hsi.ko.xz
+kernel/drivers/hsi/clients/cmt_speech.ko.xz: kernel/drivers/hsi/clients/ssi_protocol.ko.xz kernel/net/phonet/phonet.ko.xz kernel/drivers/hsi/controllers/omap_ssi.ko.xz kernel/drivers/hsi/hsi.ko.xz
+kernel/drivers/media/rc/keymaps/rc-imon-mce.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/gpio/gpio-pca953x.ko.xz:
+kernel/sound/core/snd-hwdep.ko.xz:
+kernel/drivers/input/touchscreen/tsc200x-core.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-npgtech.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/misc/tsl2550.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-mecool-kii-pro.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/accel/kxcjk-1013.ko.xz:
+kernel/drivers/phy/motorola/phy-cpcap-usb.ko.xz:
+kernel/drivers/gpu/drm/bridge/display-connector.ko.xz:
+kernel/drivers/media/i2c/ccs-pll.ko.xz:
+kernel/drivers/phy/ti/phy-dm816x-usb.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-dm1105-nec.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/hsi/clients/nokia-modem.ko.xz: kernel/drivers/hsi/clients/ssi_protocol.ko.xz kernel/net/phonet/phonet.ko.xz kernel/drivers/hsi/controllers/omap_ssi.ko.xz kernel/drivers/hsi/hsi.ko.xz
+kernel/drivers/net/usb/qmi_wwan.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz kernel/drivers/usb/class/cdc-wdm.ko.xz
+kernel/drivers/hsi/hsi.ko.xz:
+kernel/drivers/iio/pressure/bmp280-spi.ko.xz: kernel/drivers/iio/pressure/bmp280.ko.xz
+kernel/net/rfkill/rfkill.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_eem.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_ether.ko.xz
+kernel/drivers/media/rc/keymaps/rc-cinergy.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/i2c/tvp5150.ko.xz: kernel/drivers/media/v4l2-core/v4l2-fwnode.ko.xz kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/media/mc/mc.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/net/ipv6/ipv6.ko.xz:
+kernel/drivers/usb/gadget/legacy/g_zero.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/rtc/rtc-palmas.ko.xz:
+kernel/drivers/usb/host/xhci-pci.ko.xz: kernel/drivers/usb/host/xhci-hcd.ko.xz
+kernel/drivers/usb/host/ohci-platform.ko.xz: kernel/drivers/usb/host/ohci-hcd.ko.xz
+kernel/drivers/media/i2c/ir-kbd-i2c.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/nft_log.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/drivers/media/rc/keymaps/rc-gadmei-rm008z.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/usb/gadget/function/u_ether.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_ncm.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_ether.ko.xz
+kernel/drivers/gpu/drm/pvrsgx/1.17.4948957/eurasia_km/pvrsrvkm_omap4_sgx544_112.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-avermedia-a16d.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/xt_conntrack.ko.xz: kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/net/can/can-gw.ko.xz: kernel/net/can/can.ko.xz
+kernel/net/rxrpc/rxrpc.ko.xz: kernel/net/ipv4/udp_tunnel.ko.xz kernel/net/ipv6/ip6_udp_tunnel.ko.xz
+kernel/fs/nfs/nfsv2.ko.xz: kernel/fs/nfs/nfs.ko.xz kernel/fs/lockd/lockd.ko.xz kernel/fs/nfs_common/grace.ko.xz kernel/net/sunrpc/sunrpc.ko.xz
+kernel/crypto/sha512_generic.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-iodata-bctv7e.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/fs/nfs/nfsv3.ko.xz: kernel/fs/nfs/nfs.ko.xz kernel/fs/lockd/lockd.ko.xz kernel/fs/nfs_common/grace.ko.xz kernel/fs/nfs_common/nfs_acl.ko.xz kernel/net/sunrpc/sunrpc.ko.xz
+kernel/drivers/input/touchscreen/atmel_mxt_ts.ko.xz:
+kernel/drivers/usb/host/ohci-hcd.ko.xz:
+kernel/fs/nfs/nfsv4.ko.xz: kernel/fs/nfs/nfs.ko.xz kernel/fs/lockd/lockd.ko.xz kernel/net/sunrpc/sunrpc.ko.xz kernel/fs/nfs_common/grace.ko.xz
+kernel/drivers/input/keyboard/matrix_keypad.ko.xz: kernel/drivers/input/matrix-keymap.ko.xz
+kernel/drivers/media/rc/keymaps/rc-xbox-dvd.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/usb/smsc75xx.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz
+kernel/drivers/char/hw_random/omap-rng.ko.xz: kernel/drivers/char/hw_random/rng-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-delock-61959.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-proteus-2309.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/bcma/bcma.ko.xz:
+kernel/lib/math/cordic.ko.xz:
+kernel/drivers/clk/clk-palmas.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-twinhan1027.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/veth.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_ecm_subset.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_ether.ko.xz
+kernel/drivers/mtd/spi-nor/spi-nor.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pctv-sedna.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/accel/st_accel_i2c.ko.xz: kernel/drivers/iio/accel/st_accel.ko.xz kernel/drivers/iio/common/st_sensors/st_sensors.ko.xz kernel/drivers/iio/common/st_sensors/st_sensors_i2c.ko.xz
+kernel/net/sunrpc/sunrpc.ko.xz:
+kernel/net/llc/llc.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_obex.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_serial.ko.xz
+kernel/drivers/media/rc/keymaps/rc-norwood.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv6/netfilter/ip6table_filter.ko.xz: kernel/net/ipv6/netfilter/ip6_tables.ko.xz kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/media/rc/keymaps/rc-eztv.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/radio/si4713/radio-platform-si4713.ko.xz: kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/media/mc/mc.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/drivers/usb/host/ohci-pci.ko.xz: kernel/drivers/usb/host/ohci-hcd.ko.xz
+kernel/drivers/media/rc/keymaps/rc-kaiomy.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv6/netfilter/ip6t_REJECT.ko.xz: kernel/net/netfilter/x_tables.ko.xz kernel/net/ipv6/netfilter/nf_reject_ipv6.ko.xz kernel/net/ipv6/ipv6.ko.xz
+kernel/drivers/net/ppp/ppp_mppe.ko.xz: kernel/lib/crypto/libarc4.ko.xz kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/drivers/iio/adc/ina2xx-adc.ko.xz:
+kernel/net/phonet/pn_pep.ko.xz: kernel/net/phonet/phonet.ko.xz
+kernel/drivers/hwmon/gpio-fan.ko.xz: kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/iio/light/tsl2563.ko.xz:
+kernel/drivers/media/i2c/adp1653.ko.xz: kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/spi/spi-ti-qspi.ko.xz:
+kernel/net/netfilter/nft_reject.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/net/netfilter/ipvs/ip_vs_rr.ko.xz: kernel/net/netfilter/ipvs/ip_vs.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/usb/gadget/legacy/gadgetfs.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pinnacle-pctv-hd.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/crypto/md5.ko.xz:
+kernel/drivers/gpu/drm/pvrsgx/1.17.4948957/eurasia_km/pvrsrvkm_omap3_sgx530_121.ko.xz:
+kernel/net/ipv4/netfilter/nft_reject_ipv4.ko.xz: kernel/net/netfilter/nft_reject.ko.xz kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/drivers/gpu/drm/pvrsgx/1.17.4948957/eurasia_km/pvrsrvkm_omap4_sgx540_120.ko.xz:
+kernel/drivers/net/ppp/bsd_comp.ko.xz: kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/arch/arm/lib/xor-neon.ko.xz:
+kernel/drivers/gpu/drm/panel/panel-tpo-td043mtea1.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-medion-x10.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-terratec-cinergy-xs.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/extcon/extcon-usb-gpio.ko.xz:
+kernel/net/ipv6/netfilter/nft_reject_ipv6.ko.xz: kernel/net/ipv6/netfilter/nf_reject_ipv6.ko.xz kernel/net/ipv6/ipv6.ko.xz kernel/net/netfilter/nft_reject.ko.xz kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/drivers/media/rc/keymaps/rc-cinergy-1400.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-ati-tv-wonder-hd-600.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/crypto/ecb.ko.xz:
+kernel/drivers/usb/misc/usbtest.ko.xz:
+kernel/drivers/usb/host/xhci-plat-hcd.ko.xz: kernel/drivers/usb/host/xhci-hcd.ko.xz
+kernel/drivers/net/slip/slhc.ko.xz:
+kernel/drivers/mfd/ti-lmu.ko.xz:
+kernel/crypto/ecc.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-ct-90405.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/cpufreq/cpufreq-dt.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-xbox-360.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/ppp/ppp_async.ko.xz: kernel/drivers/net/ppp/ppp_generic.ko.xz kernel/drivers/net/slip/slhc.ko.xz
+kernel/net/mac80211/mac80211.ko.xz: kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz kernel/lib/crypto/libarc4.ko.xz
+kernel/fs/lockd/lockd.ko.xz: kernel/net/sunrpc/sunrpc.ko.xz kernel/fs/nfs_common/grace.ko.xz
+kernel/drivers/usb/gadget/function/usb_f_serial.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz kernel/drivers/usb/gadget/function/u_serial.ko.xz
+kernel/drivers/media/rc/keymaps/rc-asus-pc39.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/adc/cpcap-adc.ko.xz:
+kernel/net/netfilter/xt_nat.ko.xz: kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/crypto/omap-aes-driver.ko.xz: kernel/drivers/crypto/omap-crypto.ko.xz kernel/crypto/crypto_engine.ko.xz
+kernel/sound/soc/ti/snd-soc-omap-dmic.ko.xz: kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz
+kernel/drivers/input/misc/twl4030-vibra.ko.xz:
+kernel/drivers/phy/motorola/phy-mapphone-mdm6600.ko.xz:
+kernel/drivers/net/phy/ax88796b.ko.xz:
+kernel/drivers/power/supply/bq2415x_charger.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-technisat-usb2.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/lib/crypto/libdes.ko.xz:
+kernel/drivers/power/supply/bq24735-charger.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-dib0700-rc5.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-rc6-mce.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv6/netfilter/nf_reject_ipv6.ko.xz: kernel/net/ipv6/ipv6.ko.xz
+kernel/drivers/media/rc/keymaps/rc-videomate-m1f.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-purpletv.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/fs/nfs_common/nfs_acl.ko.xz: kernel/net/sunrpc/sunrpc.ko.xz
+kernel/drivers/w1/wire.ko.xz: kernel/drivers/connector/cn.ko.xz kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/media/rc/keymaps/rc-leadtek-y04g0051.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/crypto/fcrypt.ko.xz:
+kernel/drivers/mailbox/omap-mailbox.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-geekbox.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/i2c/et8ek8/et8ek8.ko.xz: kernel/drivers/media/v4l2-core/v4l2-fwnode.ko.xz kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/leds/led-class.ko.xz kernel/drivers/media/mc/mc.ko.xz
+kernel/drivers/spi/spi-gpio.ko.xz: kernel/drivers/spi/spi-bitbang.ko.xz
+kernel/net/ipv4/netfilter/nft_fib_ipv4.ko.xz: kernel/net/netfilter/nft_fib.ko.xz kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz
+kernel/crypto/algif_skcipher.ko.xz: kernel/crypto/af_alg.ko.xz
+kernel/drivers/misc/eeprom/at24.ko.xz:
+kernel/drivers/gpu/drm/bridge/ti-tfp410.ko.xz:
+kernel/drivers/media/v4l2-core/v4l2-dv-timings.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pinnacle-color.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/ipv6/netfilter/nft_fib_ipv6.ko.xz: kernel/net/netfilter/nft_fib.ko.xz kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz kernel/net/ipv6/ipv6.ko.xz
+kernel/net/8021q/8021q.ko.xz:
+kernel/sound/core/oss/snd-mixer-oss.ko.xz:
+kernel/drivers/media/rc/rc-core.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-dvico-mce.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/xt_CHECKSUM.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/net/netfilter/nft_ct.ko.xz: kernel/net/netfilter/nf_tables.ko.xz kernel/net/netfilter/nfnetlink.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/crypto/xts.ko.xz:
+kernel/crypto/drbg.ko.xz:
+kernel/drivers/net/usb/cdc_subset.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz
+kernel/drivers/media/rc/keymaps/rc-khadas.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/bridge/br_netfilter.ko.xz: kernel/net/bridge/bridge.ko.xz kernel/net/802/stp.ko.xz kernel/net/llc/llc.ko.xz kernel/net/ipv6/ipv6.ko.xz
+kernel/drivers/memory/emif.ko.xz:
+kernel/drivers/hsi/clients/hsi_char.ko.xz: kernel/drivers/hsi/hsi.ko.xz
+kernel/drivers/media/rc/keymaps/rc-evga-indtube.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/fs/btrfs/btrfs.ko.xz: kernel/lib/raid6/raid6_pq.ko.xz kernel/crypto/xor.ko.xz kernel/arch/arm/lib/xor-neon.ko.xz
+kernel/drivers/video/backlight/led_bl.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/net/802/psnap.ko.xz: kernel/net/llc/llc.ko.xz
+kernel/fs/nfs_common/grace.ko.xz:
+kernel/drivers/usb/gadget/function/usb_f_hid.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/media/i2c/aptina-pll.ko.xz:
+kernel/drivers/hwmon/lm75.ko.xz: kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/input/rmi4/rmi_i2c.ko.xz: kernel/drivers/input/rmi4/rmi_core.ko.xz
+kernel/drivers/bluetooth/hci_nokia.ko.xz: kernel/drivers/bluetooth/hci_uart.ko.xz kernel/drivers/bluetooth/btbcm.ko.xz kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/media/rc/keymaps/rc-avermedia-cardbus.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/crypto/algif_hash.ko.xz: kernel/crypto/af_alg.ko.xz
+kernel/sound/soc/codecs/snd-soc-hdmi-codec.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-medion-x10-digitainer.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-avermedia-m135a.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-d680-dmb.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/sound/soc/codecs/snd-soc-twl6040.ko.xz:
+kernel/crypto/sha1_generic.ko.xz:
+kernel/drivers/hwmon/hwmon.ko.xz:
+kernel/drivers/w1/masters/omap_hdq.ko.xz: kernel/drivers/w1/wire.ko.xz kernel/drivers/connector/cn.ko.xz kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/media/rc/keymaps/rc-gotview7135.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/iio/magnetometer/ak8975.ko.xz:
+kernel/net/ipv6/netfilter/ip6_tables.ko.xz: kernel/net/netfilter/x_tables.ko.xz
+kernel/drivers/input/keyboard/gpio_keys.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-pine64.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/v4l2-core/v4l2-fwnode.ko.xz: kernel/drivers/media/v4l2-core/v4l2-async.ko.xz kernel/drivers/media/v4l2-core/videodev.ko.xz kernel/drivers/media/mc/mc.ko.xz kernel/drivers/leds/led-class.ko.xz
+kernel/net/ipv4/tunnel4.ko.xz:
+kernel/drivers/input/misc/twl-pwrbutton.ko.xz:
+kernel/drivers/watchdog/twl4030_wdt.ko.xz:
+kernel/drivers/bluetooth/bpa10x.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/net/dummy.ko.xz:
+kernel/drivers/ata/libata.ko.xz:
+kernel/drivers/leds/leds-lm3532.ko.xz: kernel/drivers/leds/led-class.ko.xz
+kernel/net/bridge/bridge.ko.xz: kernel/net/ipv6/ipv6.ko.xz kernel/net/802/stp.ko.xz kernel/net/llc/llc.ko.xz
+kernel/drivers/media/rc/keymaps/rc-imon-rsc.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/crypto/blake2b_generic.ko.xz:
+kernel/crypto/ecdh_generic.ko.xz: kernel/crypto/ecc.ko.xz
+kernel/drivers/net/can/dev/can-dev.ko.xz:
+kernel/drivers/input/touchscreen/ads7846.ko.xz: kernel/drivers/hwmon/hwmon.ko.xz
+kernel/drivers/usb/class/cdc-wdm.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-winfast-usbii-deluxe.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/media/rc/keymaps/rc-azurewave-ad-tu700.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/fs/f2fs/f2fs.ko.xz:
+kernel/drivers/input/touchscreen/pixcir_i2c_ts.ko.xz:
+kernel/drivers/bluetooth/bfusb.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/media/rc/keymaps/rc-tbs-nec.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/net/netfilter/x_tables.ko.xz:
+kernel/drivers/leds/trigger/ledtrig-backlight.ko.xz:
+kernel/drivers/block/nbd.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-kworld-315u.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/can/c_can/c_can.ko.xz: kernel/drivers/net/can/dev/can-dev.ko.xz
+kernel/drivers/net/usb/asix.ko.xz: kernel/drivers/net/usb/usbnet.ko.xz kernel/drivers/net/phy/phylink.ko.xz
+kernel/crypto/async_tx/async_xor.ko.xz: kernel/crypto/async_tx/async_tx.ko.xz kernel/crypto/xor.ko.xz kernel/arch/arm/lib/xor-neon.ko.xz
+kernel/drivers/rtc/rtc-m41t80.ko.xz:
+kernel/drivers/bluetooth/btmrvl.ko.xz: kernel/net/bluetooth/bluetooth.ko.xz kernel/crypto/ecdh_generic.ko.xz kernel/crypto/ecc.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/drivers/net/tun.ko.xz:
+kernel/drivers/usb/gadget/legacy/g_nokia.ko.xz: kernel/drivers/usb/gadget/function/usb_f_mass_storage.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
+kernel/drivers/media/rc/keymaps/rc-encore-enltv.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/sound/soc/ti/snd-soc-davinci-mcasp.ko.xz: kernel/sound/soc/ti/snd-soc-ti-sdma.ko.xz kernel/sound/soc/ti/snd-soc-ti-edma.ko.xz kernel/sound/soc/ti/snd-soc-ti-udma.ko.xz
+kernel/drivers/media/rc/keymaps/rc-anysee.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/arch/arm/crypto/curve25519-neon.ko.xz: kernel/lib/crypto/libcurve25519-generic.ko.xz
+kernel/drivers/input/matrix-keymap.ko.xz:
+kernel/drivers/gpu/drm/i2c/tda998x.ko.xz:
+kernel/net/can/can-raw.ko.xz: kernel/net/can/can.ko.xz
+kernel/net/sched/cls_u32.ko.xz:
+kernel/drivers/net/wireless/ti/wl18xx/wl18xx.ko.xz: kernel/drivers/net/wireless/ti/wlcore/wlcore.ko.xz kernel/net/mac80211/mac80211.ko.xz kernel/lib/crypto/libarc4.ko.xz kernel/net/wireless/cfg80211.ko.xz kernel/net/rfkill/rfkill.ko.xz
+kernel/crypto/asymmetric_keys/pkcs8_key_parser.ko.xz:
+kernel/net/netfilter/xt_REDIRECT.ko.xz: kernel/net/netfilter/x_tables.ko.xz kernel/net/netfilter/nf_nat.ko.xz kernel/net/netfilter/nf_conntrack.ko.xz kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz kernel/net/ipv6/netfilter/nf_defrag_ipv6.ko.xz
+kernel/drivers/power/supply/bq27xxx_battery.ko.xz:
+kernel/net/ipv4/netfilter/nf_defrag_ipv4.ko.xz:
+kernel/sound/usb/snd-usb-audio.ko.xz: kernel/drivers/media/mc/mc.ko.xz kernel/sound/usb/snd-usbmidi-lib.ko.xz kernel/sound/core/snd-rawmidi.ko.xz kernel/sound/core/snd-hwdep.ko.xz
+kernel/drivers/hid/usbhid/usbhid.ko.xz:
+kernel/drivers/media/rc/keymaps/rc-khamsin.ko.xz: kernel/drivers/media/rc/rc-core.ko.xz
+kernel/drivers/net/phy/phylink.ko.xz:

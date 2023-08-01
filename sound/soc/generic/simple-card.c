@@ -357,6 +357,7 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 	if (!node) {
 		node = of_node_get(top);
 		is_top = 1;
+		pr_err("findme not node");
 	}
 
 	/* loop for all dai-link */
@@ -371,6 +372,7 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 		codec = of_get_child_by_name(node, is_top ?
 					     PREFIX "codec" : "codec");
 		if (!codec) {
+			pr_err("findme codec err");
 			ret = -ENODEV;
 			goto error;
 		}
@@ -426,6 +428,7 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 	} while (!is_top && node);
 
  error:
+	pr_err("findme reached error :("):
 	of_node_put(node);
 	return ret;
 }
@@ -455,7 +458,9 @@ static int simple_for_each_link(struct asoc_simple_priv *priv,
 	 * detect "dummy-Codec" in last;
 	 */
 	for (li->cpu = 1; li->cpu >= 0; li->cpu--) {
+		pr_err("FINDME: %d", li->cpu);
 		ret = __simple_for_each_link(priv, li, func_noml, func_dpcm);
+		pr_err("findme ret %d, ret");
 		if (ret < 0)
 			break;
 	}
@@ -467,14 +472,14 @@ static int simple_parse_of(struct asoc_simple_priv *priv, struct link_info *li)
 {
 	struct snd_soc_card *card = simple_priv_to_card(priv);
 	int ret;
-
+	
 	ret = asoc_simple_parse_widgets(card, PREFIX);
 	if (ret < 0)
 		return ret;
 
 	ret = asoc_simple_parse_routing(card, PREFIX);
 	if (ret < 0)
-		return ret;
+                return ret;
 
 	ret = asoc_simple_parse_pin_switches(card, PREFIX);
 	if (ret < 0)
@@ -485,8 +490,10 @@ static int simple_parse_of(struct asoc_simple_priv *priv, struct link_info *li)
 	ret = simple_for_each_link(priv, li,
 				   simple_dai_link_of,
 				   simple_dai_link_of_dpcm);
-	if (ret < 0)
+	if (ret < 0) {
+                pr_err("Simple audio card parse for each %d\n", ret);
 		return ret;
+	}
 
 	ret = asoc_simple_parse_card_name(card, PREFIX);
 	if (ret < 0)
@@ -669,6 +676,7 @@ static int asoc_simple_probe(struct platform_device *pdev)
 
 		ret = simple_parse_of(priv, li);
 		if (ret < 0) {
+			dev_err(dev, "Simple sound card error %d\n", ret);
 			dev_err_probe(dev, ret, "parse error\n");
 			goto err;
 		}

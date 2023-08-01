@@ -59,7 +59,7 @@
 			vsync-active = <0>;
 			de-active = <1>;
 			pixelclk-active = <1>;
-			syncclk-active = <0>;
+			syncclk-active = <1>;
 		};
 
 		port {

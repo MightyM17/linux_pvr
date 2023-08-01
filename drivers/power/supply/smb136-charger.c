@@ -124,7 +124,7 @@ static int smb136_mains_get_property(struct power_supply *psy,
 				     union power_supply_propval *val)
 {
 	struct smb136_charger *smb = power_supply_get_drvdata(psy);
-	printk("smb136_mains_get_property");
+	printk("smb136_mains_get_property, prop is %d", prop);
 
 	switch (prop) {
 	case POWER_SUPPLY_PROP_ONLINE:
@@ -146,6 +146,7 @@ static int smb136_mains_set_property(struct power_supply *psy,
 	printk("smb136_mains_set_property");
 	switch (prop) {
 	case POWER_SUPPLY_PROP_ONLINE:
+		printk("smb136_mains_set_property: Setting val as PROP_ONLINE");
 		oldval = smb->mains_online;
 
 		smb->mains_online = val->intval;
@@ -177,7 +178,7 @@ static int smb136_usb_get_property(struct power_supply *psy,
 {
 	struct smb136_charger *smb = power_supply_get_drvdata(psy);
 
-	printk("smb136_usb_get_property");
+	printk("smb136_usb_get_property, prop is %d", prop);
 	switch (prop) {
 	case POWER_SUPPLY_PROP_ONLINE:
 		val->intval = smb->usb_online;
@@ -201,7 +202,7 @@ static int smb136_usb_set_property(struct power_supply *psy,
 	struct smb136_charger *smb = power_supply_get_drvdata(psy);
 	bool oldval;
 
-	printk("smb136_usb_set_property");
+	printk("smb136_usb_set_property, prop is %d", prop);
 	switch (prop) {
 	case POWER_SUPPLY_PROP_ONLINE:
 		oldval = smb->usb_online;
@@ -239,7 +240,7 @@ static int smb136_usb_property_is_writeable(struct power_supply *psy,
 
 static int smb136_get_battery_info(struct smb136_charger *smb)
 {
-	struct smb136_charger_platform_data *pdata = (void *)smb->pdata;
+	//struct smb136_charger_platform_data *pdata = (void *)smb->pdata;
 	//struct power_supply_battery_info info = {};
 	struct power_supply_battery_info *info;
 	struct power_supply *supply;
@@ -252,9 +253,15 @@ static int smb136_get_battery_info(struct smb136_charger *smb)
 
 	err = power_supply_get_battery_info(supply, &info);
 	if (err == -ENXIO || err == -ENODEV)
+	{
+		printk("smb_get_battery_info, no error");
 		return 0;
+	}
 	if (err)
+	{
+		printk("smb_get_battery_info error %d", err);
 		return err;
+	}
 
 	return 0;
 }
@@ -280,7 +287,7 @@ static void smb136_start_charger(int cable_type)
 	union power_supply_propval usb_online = { cable_type == CABLE_TYPE_USB ? 1 : 0 };
 	union power_supply_propval ac_online = { cable_type == CABLE_TYPE_AC ? 1 : 0 };
 
-	printk("smb136_start_charger, cable_type is %x", cable_type );
+	printk("smb136_start_charger, cable_type is %d", cable_type);
 	smb_usb = power_supply_get_by_name("smb136-usb");
 	smb_mains = power_supply_get_by_name("smb136-mains");
 
@@ -344,10 +351,7 @@ enum espresso_adc_ch {
 	ACCESSORY_ID,	/* OTG detection */
 	EAR_ADC_35,	/* Earjack detection */
 };
-#define ADC_CHANNEL_IN0		4
-#define ADC_CHANNEL_IN1		5
 #define ADC_CHANNEL_IN2		6
-#define ADC_CHANNEL_IN3		7
 #define MAX_ADC_VAL	4096
 #define MIN_ADC_VAL	0
 
@@ -377,15 +381,17 @@ int omap4_espresso_get_adc(enum espresso_adc_ch ch)
 		msleep(400);	/* delay for unstable cable connection */
 
 		//espresso_gpio_set_for_adc_check_1();
-        gpio_set_value(154, 0);
-        gpio_set_value(60, 1);
+	        gpio_set_value(154, 0);
+	        gpio_set_value(60, 1);
+		//End
+
 		msleep(150);	/* delay for slow increase of line voltage */
 
-		for (i = 0; i < 5; i) {
+		for (i = 0; i < 5; i++) {
 			usleep_range(5000, 5500);
 			adc_tmp = stmpe811_adc_get_value(stmpe811_ch);
-			//pr_info("adc_check_1 adc=%d\n", adc_tmp);
-			adc_sum = adc_tmp;
+			printk("adc_check_1 adc=%d\n", adc_tmp);
+			adc_sum += adc_tmp;
 			if (adc_max < adc_tmp)
 				adc_max = adc_tmp;
 
@@ -394,12 +400,14 @@ int omap4_espresso_get_adc(enum espresso_adc_ch ch)
 		}
 		//espresso_gpio_rel_for_adc_check_1();
 		gpio_set_value(154, 1);
-        gpio_set_value(60, 0);
+	        gpio_set_value(60, 0);
 		adc = (adc_sum - adc_max - adc_min) / 3;
-	} else {
-        printk("smb136 uh not ADC_CHECK_1");
+	}
+       	else 
+	{
+	        printk("smb136 uh not ADC_CHECK_1");
 		adc = stmpe811_adc_get_value(stmpe811_ch);
-    }
+	}
 
 	return adc;
 }
@@ -413,7 +421,7 @@ int check_charger_type(void)
 		return CABLE_TYPE_NONE;
 
 	adc = omap4_espresso_get_adc(ADC_CHECK_1);
-	cable_type = adc > 750 ? //cable_type = adc > CABLE_DETECT_VALUE ?
+	cable_type = adc > CABLE_DETECT_VALUE ? //cable_type = adc > CABLE_DETECT_VALUE ?
 			CABLE_TYPE_AC :
 			CABLE_TYPE_USB;
 
@@ -433,25 +441,35 @@ static irqreturn_t smb136_interrupt(int irq, void *smb_chip)
 
 	u8 chg_status = 0;
 
-	printk("%s\n", __func__);
-
-	msleep(100);
+	printk("SMB136: %s\n", __func__);
 
 	val = gpio_get_value(GPIO_TA_NCONNECTED);
+	printk("smb136: Val is %d", val);
 	if (val < 0) {
 		pr_err("usb ta_nconnected: gpio_get_value error %d\n", val);
 		return IRQ_HANDLED;
 	}
 
-	reg = SMB136_STATUS_E;
+	/*reg = SMB136_STATUS_E;
 	val = smb136_i2c_read(chip->client, reg);
 	if (val >= 0) {
 		chg_status = (u8)val;
 		pr_info("%s : reg (0x%x) = 0x%x\n", __func__, reg, chg_status);
-        smb136_start_charger(espresso_cable_type);
+	        //smb136_start_charger(espresso_cable_type);
 	}
 	if(!val)
-        espresso_cable_type = check_charger_type();
+        	espresso_cable_type = check_charger_type();
+	
+	smb136_start_charger(espresso_cable_type);*/
+
+	if(!val) { //connected
+		espresso_cable_type = check_charger_type();
+	}
+	else {
+		espresso_cable_type = CABLE_TYPE_NONE;
+	}
+	printk("smb136: espresso cable type is %d", espresso_cable_type);
+	smb136_start_charger(espresso_cable_type);
 
 	/*if(chip->pdata->chg_intr_trigger)
 		chip->pdata->chg_intr_trigger((int)(chg_status&0x1));*/
@@ -535,6 +553,12 @@ static int smb136_probe(struct i2c_client *client)
 	irq = gpio_to_irq(GPIO_TA_NCONNECTED);
 	val = gpio_get_value(GPIO_TA_NCONNECTED);
 
+	/* 	status = request_threaded_irq(irq, NULL, ta_nconnected_irq,
+			(val ? IRQF_TRIGGER_LOW : IRQF_TRIGGER_HIGH) | \
+			IRQF_ONESHOT | IRQF_NO_SUSPEND,
+			"TA_nConnected", otg); 
+	*/
+
 	ret = request_threaded_irq(client->irq, NULL, smb136_interrupt, IRQF_ONESHOT,
 			"smb136", smb);
 	if (ret < 0) {
@@ -555,7 +579,8 @@ static void smb136_remove(struct i2c_client *client)
 {
 	struct smb136_charger *smb = i2c_get_clientdata(client);
 	//Doesnt work :(
-
+	power_supply_unregister(smb->usb);
+	power_supply_unregister(smb->mains);
 }
 
 static const struct i2c_device_id smb136_id[] = {

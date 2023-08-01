@@ -29,6 +29,13 @@ config EXTCON_AXP288
 	  Say Y here to enable support for USB peripheral detection
 	  and USB MUX switching by X-Power AXP288 PMIC.
 
+config EXTCON_ESPRESSO
+	tristate "ESPRESSO USB EXTCON support"
+	depends on STMPE_ADC
+	help
+	  Say Y here to enable support for USB peripheral and USB host
+	  detection (mains and usb) by espresso.
+
 config EXTCON_FSA9480
 	tristate "FSA9480 EXTCON Support"
 	depends on INPUT && I2C

@@ -199,7 +199,7 @@
 
 	gp2a_shunt: current-sense-shunt {
 		compatible = "current-sense-shunt";
-		io-channels = <&adc 4>;
+		io-channels = <&twl6032_adc 4>;
 		shunt-resistor-micro-ohms = <24000000>; /* 24 ohms */
 		/* https://github.com/LineageOS/android_device_samsung_espressowifi/blob/cm-14.1/libsensors/LightSensor.cpp#L152 */
 		#io-channel-cells = <0>;
@@ -512,6 +512,12 @@
 			compatible = "ti,twl6030-power";
 			ti,system-power-controller;
 		};
+
+		twl6032_adc: gpadc {
+	               compatible = "ti,twl6032-gpadc";
+	               interrupts = <3>;
+	               #io-channel-cells = <1>;
+	       };
 	};
 
 	wm1811: audio-codec@1a {
@@ -705,8 +711,8 @@
 };
 
 &mcbsp3 {
+	status = "okay";
 	#sound-dai-cells = <0>;
 	pinctrl-names = "default";
 	pinctrl-0 = <&mcbsp3_pins>;
-	status = "okay";
 };
