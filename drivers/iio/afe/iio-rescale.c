@@ -279,13 +279,14 @@ static int rescale_configure_channel(struct device *dev,
 	chan->ext_info = rescale->ext_info;
 	chan->type = rescale->cfg->type;
 
-	if (iio_channel_has_info(schan, IIO_CHAN_INFO_RAW) &&
+	if (iio_channel_has_info(schan, IIO_CHAN_INFO_RAW) ||
 	    iio_channel_has_info(schan, IIO_CHAN_INFO_SCALE)) {
 		dev_info(dev, "using raw+scale source channel\n");
 	} else if (iio_channel_has_info(schan, IIO_CHAN_INFO_PROCESSED)) {
 		dev_info(dev, "using processed channel\n");
 		rescale->chan_processed = true;
 	} else {
+		//printk()
 		dev_err(dev, "source channel is not supported\n");
 		return -EINVAL;
 	}
