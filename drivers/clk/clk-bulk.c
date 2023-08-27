@@ -5,6 +5,8 @@
  * Dong Aisheng <aisheng.dong@nxp.com>
  */
 
+#define DEBUG
+
 #include <linux/clk.h>
 #include <linux/clk-provider.h>
 #include <linux/device.h>

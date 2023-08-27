@@ -357,7 +357,6 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 	if (!node) {
 		node = of_node_get(top);
 		is_top = 1;
-		pr_err("findme not node");
 	}
 
 	/* loop for all dai-link */
@@ -372,7 +371,6 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 		codec = of_get_child_by_name(node, is_top ?
 					     PREFIX "codec" : "codec");
 		if (!codec) {
-			pr_err("findme codec err");
 			ret = -ENODEV;
 			goto error;
 		}
@@ -402,8 +400,9 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 				 * CPU	 |Pass  |return
 				 * Codec |return|Pass
 				 */
-				if (li->cpu != (np == codec))
+				if (li->cpu != (np == codec)) {
 					ret = func_dpcm(priv, np, codec, li, is_top);
+				}
 			/* else normal sound */
 			} else {
 				/*
@@ -412,8 +411,9 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 				 * CPU	 |Pass  |return
 				 * Codec |return|return
 				 */
-				if (li->cpu && (np != codec))
+				if (li->cpu && (np != codec)) {
 					ret = func_noml(priv, np, codec, li, is_top);
+				}
 			}
 
 			if (ret < 0) {
@@ -428,7 +428,6 @@ static int __simple_for_each_link(struct asoc_simple_priv *priv,
 	} while (!is_top && node);
 
  error:
-	pr_err("findme reached error :("):
 	of_node_put(node);
 	return ret;
 }
@@ -458,9 +457,7 @@ static int simple_for_each_link(struct asoc_simple_priv *priv,
 	 * detect "dummy-Codec" in last;
 	 */
 	for (li->cpu = 1; li->cpu >= 0; li->cpu--) {
-		pr_err("FINDME: %d", li->cpu);
 		ret = __simple_for_each_link(priv, li, func_noml, func_dpcm);
-		pr_err("findme ret %d, ret");
 		if (ret < 0)
 			break;
 	}

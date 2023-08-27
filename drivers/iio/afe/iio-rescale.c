@@ -286,7 +286,6 @@ static int rescale_configure_channel(struct device *dev,
 		dev_info(dev, "using processed channel\n");
 		rescale->chan_processed = true;
 	} else {
-		//printk()
 		dev_err(dev, "source channel is not supported\n");
 		return -EINVAL;
 	}
