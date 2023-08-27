@@ -103,16 +103,10 @@
 	};
 
 	gpadc: gpadc {
-		compatible = "ti,twl6030-gpadc";
+		compatible = "ti,twl6032-gpadc";
 		interrupts = <3>;
 		#io-channel-cells = <1>;
 	};
-
-       adc: gpadc {
-               compatible = "ti,twl6032-gpadc";
-               interrupts = <3>;
-               #io-channel-cells = <1>;
-       };
 
 	twl_pwrbutton: pwrbutton {
 		compatible = "ti,twl6030-pwrbutton";

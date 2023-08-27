@@ -80,14 +80,14 @@
                regulator-always-on;
        };
 
-       /*adc: gpadc {
+       /*twl6032_adc: gpadc {
                compatible = "ti,twl6032-gpadc";
                interrupts = <3>;
                #io-channel-cells = <1>;
        };*/
 
        clk32kaudio: clk32kaudio {
-               compatible = "ti,twl6030-clk32kaudio";
-	       #clock-cells = <0>;
+               compatible = "ti,twl6032-clk32kaudio";
+		#clock-cells = <0>;
        };
 };
